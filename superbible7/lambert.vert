@@ -29,6 +29,6 @@ void main()
 	vs_out.light_eye = viewTf * lightModelTf * vec4( 2.0, 2.0, 3.0, 1.0 );
 	vs_out.normal_eye = normalize( normalTf * normal );
 	vs_out.color = normalize(color);
-	
+	//vs_out.color = normalize(normal);
 	gl_Position = projectionTf * position_eye;
 }

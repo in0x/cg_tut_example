@@ -34,9 +34,8 @@ public:
 
 	void startup()
 	{
-		//createProgram("1.vert", "1.frag");
 		createProgram("lambert.vert", "lambert.frag");
-
+		
 		m_modelTf = glm::mat4{1.0};
 		m_viewTf = glm::lookAt(glm::vec3{ 0, 0, 2 }, glm::vec3{ 0,0,0 }, glm::vec3{ 0,1,0 });
 		m_projectionTf = glm::perspective(glm::radians(90.f), ((float)info.windowWidth / (float)info.windowHeight), 0.5f, 20.f);

@@ -25,9 +25,7 @@ void main()
 	// Specular.
 	vec3 R = reflect(-L, N);
 	vec3 V = -vs_in.position_eye.xyz; // Camera is at origin in view space.
-	//float specular = pow(max(dot(normalize(R),normalize(V)), 0.0), shininess); 
-	
-	float specular = 0;
+	float specular = pow(max(dot(normalize(R),normalize(V)), 0.0), shininess); 
 		
 	fragColor = vec4(color * ambient + dotNL * color + specular * color , 1);
 }
